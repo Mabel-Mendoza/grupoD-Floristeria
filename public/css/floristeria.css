@@ -1,0 +1,604 @@
+/* ============================================================
+   Floristería — Estilos personalizados
+   Paleta: #cb958e | #6a4e44 | #e4d5cd | #eac3bd | #ab9b9e | #7a7959
+   ============================================================ */
+
+/* Variables de color */
+:root {
+    --rosa:       #cb958e;
+    --cafe:       #6a4e44;
+    --crema:      #e4d5cd;
+    --rosa-claro: #eac3bd;
+    --gris-rosa:  #ab9b9e;
+    --verde:      #7a7959;
+    --fondo:      #faf7f5;
+    --blanco:     #ffffff;
+}
+
+/* Reset del body para la floristería */
+html, body {
+    background-color: var(--fondo);
+    overflow-x: hidden;
+}
+
+main {
+    overflow-x: hidden;
+    padding-bottom: 0 !important;
+}
+
+/* ============================================================
+   HEADER personalizado
+   ============================================================ */
+header {
+    background-color: var(--cafe) !important;
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    color: var(--rosa-claro) !important;
+}
+
+header ul li a {
+    color: var(--crema) !important;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+header ul li a:hover {
+    background-color: var(--rosa) !important;
+    color: var(--blanco) !important;
+}
+
+/* ============================================================
+   FOOTER personalizado
+   ============================================================ */
+footer, .flor-footer {
+    background-color: var(--cafe) !important;
+    color: var(--crema) !important;
+    font-family: 'Georgia', serif;
+    margin-top: 0;
+    padding: 3rem 2rem 0 2rem;
+    display: block;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(228,213,205,0.2);
+}
+
+.footer-col {
+    width: 100%;
+}
+
+
+.footer-col:last-child {
+    padding-right: 2rem;
+    margin-left: 7rem;
+}
+
+.footer-col h4 {
+    color: #eac3bd;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+    color: #e4d5cd !important;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #cb958e !important;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-center h3 {
+    font-family: 'Georgia', serif;
+    color: #eac3bd;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.footer-center p {
+    color: #ab9b9e;
+    font-size: 0.85rem;
+}
+
+.footer-right p {
+    color: #e4d5cd;
+    font-size: 0.88rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.footer-redes {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-redes a {
+    color: #eac3bd !important;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer-redes a:hover {
+    color: #cb958e !important;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    color: #ab9b9e;
+    font-size: 0.82rem;
+    width: 100%;
+}
+
+/* ============================================================
+   HERO — Sección principal de inicio
+   ============================================================ */
+.flor-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: -1rem;
+    margin-top: -1rem;
+    width: calc(100% + 2rem);
+}
+
+.flor-hero img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.55);
+    transform: scale(1.05);
+    animation: heroZoom 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+    from { transform: scale(1.0); }
+    to   { transform: scale(1.06); }
+}
+
+.flor-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 3rem;
+    max-width: 580px;
+    animation: fadeInLeft 1s ease-out;
+}
+
+/*.contacto-hero .flor-hero-content {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: translateX(-50%) !important;
+}*/
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+.flor-hero-content h2 {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    color: var(--blanco);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-shadow: 1px 2px 8px rgba(0,0,0,0.4);
+}
+
+.flor-hero-content p {
+    font-size: 1.1rem;
+    color: var(--crema);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.flor-btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background-color: var(--rosa);
+    color: var(--blanco) !important;
+    border: 2px solid var(--rosa);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.flor-btn:hover {
+    background-color: transparent;
+    color: var(--rosa) !important;
+    box-shadow: 0 4px 15px rgba(203,149,142,0.4);
+}
+
+.flor-btn-outline {
+    background-color: transparent;
+    color: var(--crema) !important;
+    border: 2px solid var(--crema);
+}
+
+.flor-btn-outline:hover {
+    background-color: var(--crema);
+    color: var(--cafe) !important;
+}
+
+/* ============================================================
+   SECCIÓN — Por qué elegirnos
+   ============================================================ */
+.flor-porque {
+    background-color: var(--blanco);
+    padding: 4rem 2rem;
+    text-align: center;
+    padding-bottom: 0 !important;
+    overflow: hidden;
+}
+
+.flor-porque h3 {
+    font-family: 'Georgia', serif;
+    color: var(--cafe);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.flor-porque .subtitulo {
+    color: var(--gris-rosa);
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.flor-iconos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.flor-icono-item {
+    flex: 1 1 180px;
+    max-width: 200px;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.flor-icono-item:hover {
+    background-color: var(--crema);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(106,78,68,0.15);
+}
+
+.flor-icono-item .icono {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.flor-icono-item p {
+    color: var(--cafe);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.flor-divider-simple {
+    width: 100vw;
+    height: 80px;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+    line-height: 0;
+}
+
+.flor-divider-simple svg {
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+
+
+
+.flor-porque .flor-divider-bottom {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    width: calc(100% + 2rem);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* ============================================================
+   SECCIÓN — Catálogo destacado
+   ============================================================ */
+.flor-catalogo {
+    background-color: var(--crema);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.flor-catalogo h3 {
+    font-family: 'Georgia', serif;
+    color: var(--cafe);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.flor-catalogo .subtitulo {
+    color: var(--gris-rosa);
+    margin-bottom: 3rem;
+}
+
+.flor-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   TARJETA de producto
+   ============================================================ */
+.flor-card {
+    background-color: var(--blanco);
+    width: 260px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106,78,68,0.1);
+    transition: all 0.35s ease;
+    position: relative;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.flor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(106,78,68,0.2);
+}
+
+.flor-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.flor-card:hover img {
+    transform: scale(1.07);
+}
+
+.flor-card-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: var(--rosa);
+    color: var(--blanco);
+    font-size: 0.75rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.flor-card-body {
+    padding: 1.25rem;
+    text-align: left;
+}
+
+.flor-card-body h4 {
+    font-family: 'Georgia', serif;
+    color: var(--cafe);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.flor-card-body .ocasion {
+    color: var(--gris-rosa);
+    font-size: 0.82rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.flor-card-body .precio {
+    color: var(--rosa);
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.flor-card-body a {
+    display: block;
+    text-align: center;
+    padding: 0.6rem;
+    background-color: var(--cafe);
+    color: var(--crema) !important;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+}
+
+.flor-card-body a:hover {
+    background-color: var(--rosa);
+}
+
+/* ============================================================
+   SECCIÓN — Banner decorativo
+   ============================================================ */
+.flor-banner {
+    text-align: center;
+}
+
+.flor-banner h3 {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.flor-banner p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   Login y Registro
+   ============================================================ */
+.fullCenter {
+    background-image: url('../imgs/hero/3.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.fullCenter::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(106, 78, 68, 0.7);
+}
+
+.fullCenter form,
+.fullCenter .depth-0 {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(228, 213, 205, 0.95) !important;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.fullCenter label {
+    color: #6a4e44;
+}
+
+.fullCenter input {
+    border: 1px solid #cb958e;
+    background-color: #ffffff;
+}
+
+.fullCenter input:focus {
+    border-color: #6a4e44;
+    outline: none;
+}
+
+.fullCenter button[type="submit"],
+.fullCenter button.primary {
+    background-color: #cb958e !important;
+    border-color: #cb958e !important;
+    color: #ffffff !important;
+    width: 100%;
+}
+
+.fullCenter button:hover {
+    background-color: #6a4e44 !important;
+    border-color: #6a4e44 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   ANIMACIÓN al hacer scroll (Intersection Observer)
+   ============================================================ */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 568px) {
+    .flor-hero-content h2 { font-size: 2rem; }
+    .flor-hero-content { padding: 1.5rem; }
+    .flor-btn { display: block; margin-bottom: 0.75rem; text-align: center; }
+}

@@ -1,0 +1,477 @@
+.about-hero .flor-hero-content h2 {
+    font-size: 2.6rem;
+}
+
+
+.about-hero-content {
+    text-align: left;
+    max-width: 600px;
+    margin-left: 1%;
+}
+
+.about-hero-content p {
+    text-align: left;
+}
+
+/* ============================================================
+   CHIP / BADGE
+   ============================================================ */
+.about-chip {
+    display: inline-block;
+    background-color: var(--rosa-claro);
+    color: var(--cafe);
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 0.8rem;
+}
+
+/* Línea decorativa centrada */
+.about-decorador {
+    width: 60px;
+    height: 3px;
+    background-color: var(--rosa);
+    margin: 0.6rem auto 1.2rem auto;
+    border-radius: 2px;
+}
+
+.about-section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.about-section-header h3 {
+    font-family: 'Georgia', serif;
+    color: var(--cafe);
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.about-section-header p {
+    color: var(--gris-rosa);
+    font-size: 1rem;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+   QUIÉNES SOMOS — Layout 2 columnas
+   ============================================================ */
+.about-quienes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    padding: 4rem 6%;
+    background-color: var(--fondo);
+}
+
+.about-quienes-texto {
+    padding-right: 1rem;
+}
+
+.about-quienes-texto h3 {
+    font-family: 'Georgia', serif;
+    color: var(--cafe);
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.about-quienes-texto .about-decorador {
+    margin: 0.6rem 0 1.2rem 0;
+}
+
+.about-quienes-texto p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 0.97rem;
+}
+
+.about-quienes-texto .flor-btn {
+    margin-top: 0.5rem;
+}
+
+/* Las 3 cards de servicios */
+.about-quienes-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.about-servicio-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: var(--blanco);
+    border: 1px solid var(--crema);
+    border-radius: 10px;
+    padding: 1.2rem 1.4rem;
+    box-shadow: 0 2px 8px rgba(106,78,68,0.06);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.about-servicio-card:hover {
+    box-shadow: 0 6px 18px rgba(106,78,68,0.12);
+    transform: translateY(-3px);
+}
+
+.about-servicio-icono {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: var(--rosa-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cafe);
+    font-size: 1.2rem;
+}
+
+.about-servicio-card h4 {
+    font-family: 'Georgia', serif;
+    color: var(--cafe);
+    font-size: 1rem;
+    margin: 0 0 0.3rem 0;
+}
+
+.about-servicio-card p {
+    color: #666;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* ============================================================
+   ESTADÍSTICAS — Banner oscuro con imagen
+   ============================================================ */
+.about-stats {
+    position: relative;
+    background-image: url('https://images.pexels.com/photos/5414029/pexels-photo-5414029.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 5rem 6%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-stats-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(106, 78, 68, 0.78);
+    z-index: 0;
+}
+
+.about-stats-content {
+    position: relative;
+    z-index: 1;
+}
+
+.about-stats-content h3 {
+    font-family: 'Georgia', serif;
+    color: var(--blanco);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-stats-sub {
+    color: var(--rosa-claro);
+    font-size: 0.97rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.about-stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.about-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.about-stat-numero {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--blanco);
+    line-height: 1;
+}
+
+.about-stat-etiqueta {
+    font-size: 0.85rem;
+    color: var(--crema);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   ESPECIALIDADES — Grid 3 columnas
+   ============================================================ */
+.about-especialidades {
+    background-color: var(--fondo);
+    padding: 4rem 6%;
+}
+
+.about-especialidades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.about-esp-card {
+    background-color: var(--blanco);
+    border: 1px solid var(--crema);
+    border-radius: 10px;
+    padding: 1.8rem 1.4rem;
+    text-align: left;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(106,78,68,0.05);
+}
+
+.about-esp-card:hover {
+    box-shadow: 0 8px 24px rgba(106,78,68,0.12);
+    transform: translateY(-4px);
+}
+
+.about-esp-icono {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--rosa-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cafe);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.about-esp-card h4 {
+    font-family: 'Georgia', serif;
+    color: var(--cafe);
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.about-esp-card p {
+    color: #666;
+    font-size: 0.87rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* ============================================================
+   EQUIPO — Fondo crema con cards
+   ============================================================ */
+.about-equipo {
+    background-image: url('https://images.pexels.com/photos/5414029/pexels-photo-5414029.jpeg'); /* cambiá por tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* efecto parallax, quitalo si no te gusta */
+    padding: 0;
+    position: relative;
+}
+
+.about-equipo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* ajustá el 0.45 para más o menos oscuridad */
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-equipo-inner {
+    padding: 3rem 6%;
+    position: relative;
+    z-index: 1; /* asegura que el contenido quede encima del overlay */
+}
+
+
+.about-equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.about-equipo-card {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(106,78,68,0.09);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.about-equipo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(106,78,68,0.15);
+}
+
+.about-equipo-avatar {
+    background: linear-gradient(135deg, var(--cafe), var(--rosa));
+    padding: 2rem 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-equipo-emoji {
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.about-equipo-info {
+    padding: 1.2rem 1.4rem 1.6rem;
+}
+
+.about-equipo-info h4 {
+    font-family: 'Georgia', serif;
+    color: var(--cafe);
+    font-size: 1.1rem;
+    margin: 0 0 0.2rem 0;
+}
+
+.about-equipo-cargo {
+    display: inline-block;
+    background-color: var(--rosa-claro);
+    color: var(--cafe);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.about-equipo-info p {
+    color: #666;
+    font-size: 0.87rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.about-equipo-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+
+/* ============================================================
+   CTA FINAL — Solicitar contacto
+   ============================================================ */
+.about-cta {
+    background-color: var(--fondo);
+    border-top: 1px solid var(--crema);
+    padding: 4rem 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-cta-content {
+    max-width: 620px;
+}
+
+.about-cta-content h3 {
+    font-family: 'Georgia', serif;
+    color: var(--cafe);
+    font-size: 1.7rem;
+    margin-bottom: 0.6rem;
+}
+
+.about-cta-content p {
+    color: #666;
+    font-size: 0.93rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.about-cta-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+
+/* ============================================================
+   ANIMACIÓN SCROLL
+   ============================================================ */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+    .about-quienes {
+        grid-template-columns: 1fr;
+    }
+
+    .about-especialidades-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-equipo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-stats-grid {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-especialidades-grid,
+    .about-equipo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-quienes {
+        padding: 3rem 4%;
+    }
+
+    .about-stats-grid {
+        gap: 1.5rem;
+    }
+
+    .about-cta {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-cta-actions {
+        justify-content: center;
+    }
+}

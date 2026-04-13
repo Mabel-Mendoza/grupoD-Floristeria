@@ -1,0 +1,199 @@
+/* ============================================================
+   Floristería — Estilos adicionales: secciones y polaroid
+   Agregar al final de floristeria.css
+   ============================================================ */
+
+/* Divisor SVG arriba */
+.flor-divider-top {
+    margin-top: -1px;
+    line-height: 0;
+    overflow: hidden;
+}
+.flor-divider-top svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+
+.flor-divider-simple {
+    width: 100vw;
+    height: 60px;
+    margin-left: calc(-50vw + 50%);
+    background: linear-gradient(135deg, #e4d5cd 25%, #eac3bd 50%, #e4d5cd 75%);
+    border-top: 4px solid #cb958e;
+}
+
+/* Divisor SVG abajo */
+.flor-divider-bottom {
+    margin-bottom: -1px;
+    line-height: 0;
+    overflow: hidden;
+}
+.flor-divider-bottom svg {
+     display: block;
+    width: 100%;
+    height: 80px;
+    min-width: 100%;
+}
+
+.flor-porque .flor-divider-bottom {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    width: calc(100% + 2rem);
+}
+
+
+
+/* ============================================================
+   SECCIÓN CATÁLOGO — imagen de fondo
+   ============================================================ */
+.flor-catalogo-bg {
+    position: relative;
+    background-image: url('https://images.pexels.com/photos/5409755/pexels-photo-5409755.jpeg?auto=compress&cs=tinysrgb&w=1600');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0;
+}
+
+/* Overlay oscuro sobre la imagen */
+.flor-catalogo-bg::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(106, 78, 68, 0.65);
+    z-index: 0;
+}
+
+.flor-catalogo-inner {
+    position: relative;
+    z-index: 1;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.flor-catalogo-inner h3 {
+    font-family: 'Georgia', serif;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.flor-catalogo-inner .subtitulo {
+    color: #e4d5cd;
+    margin-bottom: 3rem;
+}
+
+.flor-catalogo-bg .flor-divider-bottom {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    line-height: 0;
+}
+
+/* ============================================================
+   TARJETA POLAROID
+   ============================================================ */
+.flor-card-polaroid {
+    background-color: #ffffff;
+    width: 240px;
+    padding: 12px 12px 24px 12px;
+    box-shadow: 4px 6px 20px rgba(0,0,0,0.35);
+    transition: all 0.35s ease;
+    position: relative;
+    transform: rotate(-1.5deg);
+}
+
+.flor-card-polaroid:nth-child(even) {
+    transform: rotate(1.5deg);
+    margin-top: 20px;
+}
+
+.flor-card-polaroid:hover {
+    transform: rotate(0deg) translateY(-12px) scale(1.03);
+    box-shadow: 6px 12px 35px rgba(0,0,0,0.45);
+    z-index: 10;
+}
+
+.polaroid-foto {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+}
+
+.polaroid-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.flor-card-polaroid:hover .polaroid-foto img {
+    transform: scale(1.08);
+}
+
+.polaroid-body {
+    padding: 0.75rem 0.25rem 0 0.25rem;
+    text-align: center;
+}
+
+.polaroid-body h4 {
+    font-family: 'Georgia', serif;
+    color: #6a4e44;
+    font-size: 1rem;
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+.polaroid-body .ocasion {
+    color: #ab9b9e;
+    font-size: 0.78rem;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.polaroid-body .precio {
+    color: #cb958e;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.polaroid-body a {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background-color: #6a4e44;
+    color: #e4d5cd !important;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.polaroid-body a:hover {
+    background-color: #cb958e;
+}
+
+/* Botón blanco para sección oscura */
+.flor-btn-blanco {
+    background-color: #ffffff;
+    color: #6a4e44 !important;
+    border-color: #ffffff;
+}
+
+.flor-btn-blanco:hover {
+    background-color: transparent;
+    color: #ffffff !important;
+}
+
+/* ============================================================
+   AJUSTE: quitar padding del flor-porque para
+   que el divisor quede pegado al borde
+   ============================================================ */
+.flor-porque {
+    padding-bottom: 0 !important;
+}
