@@ -5,7 +5,7 @@
  *
  * @category Utility
  * @package  Views
- * @author   Orlando J Betancourth <orlando.betancourth@gmail.com>
+ * @author   Mabel Mendoza <anaimabel399@gmail.com>
  * @license  MIT http://
  * @version  CVS:1.0.0
  * @link     http://
@@ -17,7 +17,7 @@ namespace Views;
  *
  * @category Utility
  * @package  Views
- * @author   Orlando J Betancourth <orlando.betancourth@gmail.com>
+ * @author   Mabel Mendoza <anaimabel39@gmail.com>
  * @license  MIT http://
  * @link     http://
  */

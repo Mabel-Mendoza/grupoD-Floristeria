@@ -35,14 +35,34 @@
   ],
   "private": [
     {
-      "id":"Menu_PaymentCheckout",
-      "nav_url": "index.php?page=Checkout_Checkout",
-      "nav_label": "Carretilla de Compra"
+      "id": "Menu_Catalogo",
+      "nav_url": "index.php?page=Catalogo",
+      "nav_label": "<i class=\"fas fa-store\"></i>&nbsp;Catálogo"
+    },
+    {
+      "id": "Menu_Carretilla",
+      "nav_url": "index.php?page=Checkout_Carretilla",
+      "nav_label": "<i class=\"fas fa-shopping-cart\"></i>&nbsp;Carretilla"
+    },
+    {
+      "id": "Menu_Transacciones",
+      "nav_url": "index.php?page=Checkout_Transacciones",
+      "nav_label": "<i class=\"fas fa-history\"></i>&nbsp;Mis Transacciones"
     },
     {
       "id": "Menu_Mantenimiento_Arreglos",
       "nav_url": "index.php?page=Mantenimientos_Arreglos_Listado",
       "nav_label": "Arreglos Florales"
+    },
+    {
+      "id": "Menu_Seguridad_UsuariosRoles",
+      "nav_url": "index.php?page=Mantenimientos-Seguridad-UsuariosRoles",
+      "nav_label": "<i class=\"fas fa-users-cog\"></i>&nbsp;Roles por Usuario"
+    },
+    {
+      "id": "Menu_Seguridad_RolesFunciones",
+      "nav_url": "index.php?page=Mantenimientos-Seguridad-RolesFunciones",
+      "nav_label": "<i class=\"fas fa-shield-alt\"></i>&nbsp;Funciones por Rol"
     },
     {
       "id": "Menu_Contactenos",

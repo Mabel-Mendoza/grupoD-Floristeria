@@ -1,0 +1,304 @@
+/* ============================================================
+   Carretilla, Pago y Transacciones
+   Paleta: #cb958e | #6a4e44 | #e4d5cd | #ab9b9e | #7a7959
+   ============================================================ */
+
+/* ── MENSAJES ────────────────────────────────────────────────── */
+.cart-msg-ok {
+    background: #d4edda; color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 0.75rem 1.2rem;
+    border-radius: 8px;
+    margin: 1rem 2rem;
+    font-size: 0.9rem;
+}
+
+/* ── PÁGINA CARRETILLA ───────────────────────────────────────── */
+.cart-page { padding: 2rem; max-width: 1100px; margin: 0 auto; }
+.cart-titulo {
+    font-family: 'Georgia', serif;
+    color: #6a4e44;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+/* ── CARRITO VACÍO ───────────────────────────────────────────── */
+.cart-vacio {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #faf7f5;
+    border-radius: 16px;
+    border: 1px dashed #e4d5cd;
+}
+.cart-vacio__icono {
+    font-size: 4rem;
+    color: #e4d5cd;
+    margin-bottom: 1rem;
+}
+.cart-vacio h3 { color: #6a4e44; font-family: 'Georgia', serif; margin-bottom: 0.5rem; }
+.cart-vacio p  { color: #ab9b9e; margin-bottom: 1.5rem; }
+
+/* ── LAYOUT CARRITO ──────────────────────────────────────────── */
+.cart-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.cart-items  { flex: 1 1 500px; }
+.cart-resumen { flex: 0 0 300px; min-width: 260px; }
+
+/* ── ITEM ────────────────────────────────────────────────────── */
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px rgba(106,78,68,.08);
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cart-item__img {
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.cart-item__img img { width:100%; height:100%; object-fit:cover; }
+.cart-item__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.cart-item__info h4 { color:#6a4e44; font-size:0.95rem; margin:0; font-family:'Georgia',serif; }
+.cart-item__ocasion { color:#cb958e; font-size:0.76rem; font-weight:600; }
+.cart-item__tamano  { color:#ab9b9e; font-size:0.76rem; }
+.cart-item__precio-unit { color:#7a7959; font-size:0.82rem; }
+.cart-item__acciones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+}
+.cart-item__subtotal {
+    font-size:1.1rem;
+    font-weight:700;
+    color:#cb958e;
+}
+
+/* Cantidad */
+.cart-qty-form { display:flex; flex-direction:column; align-items:flex-end; gap:0.3rem; }
+.cart-qty-ctrl {
+    display:flex; align-items:center;
+    border:1px solid #e4d5cd; border-radius:6px; overflow:hidden;
+}
+.cart-qty-btn {
+    background:#faf7f5; border:none; width:30px; height:30px;
+    cursor:pointer; color:#6a4e44; font-size:1rem; transition:background 0.2s;
+}
+.cart-qty-btn:hover { background:#e4d5cd; }
+.cart-qty-input {
+    width:40px; text-align:center; border:none;
+    border-left:1px solid #e4d5cd; border-right:1px solid #e4d5cd;
+    height:30px; font-size:0.88rem; color:#6a4e44; font-weight:600;
+    background:#fff;
+}
+.cart-btn-update {
+    font-size:0.74rem; background:#e4d5cd; color:#6a4e44;
+    border:none; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;
+    transition:background 0.2s;
+}
+.cart-btn-update:hover { background:#cb958e; color:#fff; }
+.cart-btn-del {
+    background:none; border:1px solid #f5c6cb; color:#c0392b;
+    border-radius:6px; width:32px; height:32px; cursor:pointer;
+    font-size:0.85rem; display:flex; align-items:center; justify-content:center;
+    transition:all 0.2s;
+}
+.cart-btn-del:hover { background:#c0392b; color:#fff; border-color:#c0392b; }
+
+/* Vaciar */
+.cart-btn-vaciar {
+    background:none; border:none; color:#ab9b9e; font-size:0.82rem;
+    cursor:pointer; text-decoration:underline; padding:0;
+}
+.cart-btn-vaciar:hover { color:#c0392b; }
+
+/* ── RESUMEN ─────────────────────────────────────────────────── */
+.cart-resumen {
+    background:#fff;
+    border-radius:16px;
+    padding:1.5rem;
+    box-shadow:0 4px 16px rgba(106,78,68,.1);
+    position:sticky;
+    top:1rem;
+}
+.cart-resumen h3 {
+    font-family:'Georgia',serif;
+    color:#6a4e44;
+    font-size:1.1rem;
+    margin:0 0 1rem;
+    padding-bottom:0.75rem;
+    border-bottom:1px solid #e4d5cd;
+}
+.cart-resumen__linea {
+    display:flex; justify-content:space-between;
+    font-size:0.9rem; color:#6a4e44; margin-bottom:0.5rem;
+}
+.cart-resumen__tasa { color:#7a7959; font-size:0.85rem; }
+.cart-resumen__nota { display:block; color:#ab9b9e; font-size:0.74rem; margin-bottom:0.5rem; }
+.cart-resumen__sep { border-top:1px solid #e4d5cd; margin:0.75rem 0; }
+.cart-resumen__total {
+    font-size:1.05rem; font-weight:700; color:#6a4e44; margin-bottom:1.2rem;
+}
+.cart-resumen__total strong { color:#cb958e; font-size:1.25rem; }
+
+/* Botón PayPal */
+.cart-btn-paypal {
+    display:flex; align-items:center; justify-content:center; gap:0.5rem;
+    width:100%; padding:0.9rem;
+    background:#003087; color:#fff !important;
+    border-radius:8px; text-decoration:none; font-weight:700;
+    font-size:1rem; transition:background 0.3s; margin-bottom:0.75rem;
+}
+.cart-btn-paypal:hover { background:#001f5b; }
+.cart-btn-paypal .fa-paypal { font-size:1.2rem; color:#009cde; }
+
+.cart-btn-seguir {
+    display:flex; align-items:center; justify-content:center; gap:0.5rem;
+    width:100%; padding:0.75rem;
+    background:#faf7f5; color:#6a4e44 !important;
+    border:1px solid #e4d5cd; border-radius:8px;
+    text-decoration:none; font-size:0.88rem; transition:all 0.2s;
+    margin-bottom:1rem;
+}
+.cart-btn-seguir:hover { background:#e4d5cd; }
+
+.cart-seguridad {
+    display:flex; align-items:center; justify-content:center;
+    gap:0.4rem; color:#ab9b9e; font-size:0.75rem;
+}
+
+/* Botones generales */
+.cart-btn-catalogo {
+    display:inline-flex; align-items:center; gap:0.5rem;
+    padding:0.7rem 1.5rem;
+    background:#6a4e44; color:#e4d5cd !important;
+    border-radius:8px; text-decoration:none; font-size:0.9rem;
+    font-weight:600; transition:background 0.3s;
+}
+.cart-btn-catalogo:hover { background:#cb958e; color:#fff !important; }
+
+/* ── PAGO EXITOSO ────────────────────────────────────────────── */
+.pago-page { padding:2.5rem 1.5rem; max-width:750px; margin:0 auto; }
+.pago-card {
+    background:#fff; border-radius:16px;
+    box-shadow:0 6px 25px rgba(106,78,68,.12);
+    padding:2.5rem; text-align:center;
+}
+.pago-card--ok { border-top:5px solid #28a745; }
+.pago-card--err { border-top:5px solid #c0392b; }
+
+.pago-icono { font-size:4rem; margin-bottom:1rem; }
+.pago-icono--ok { color:#28a745; }
+.pago-icono--err { color:#c0392b; }
+
+.pago-card h2 { font-family:'Georgia',serif; color:#6a4e44; margin-bottom:0.5rem; }
+.pago-sub { color:#ab9b9e; margin-bottom:2rem; }
+
+.pago-detalle-grid {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:1rem; text-align:left;
+    background:#faf7f5; border-radius:10px; padding:1.2rem;
+    margin-bottom:1.5rem;
+}
+.pago-dato { display:flex; flex-direction:column; gap:0.2rem; }
+.pago-dato__label { font-size:0.75rem; color:#ab9b9e; text-transform:uppercase; letter-spacing:0.5px; }
+.pago-dato__val { font-size:0.92rem; color:#6a4e44; font-weight:600; word-break:break-all; }
+.pago-badge-ok {
+    display:inline-block; background:#d4edda; color:#155724;
+    padding:0.15rem 0.6rem; border-radius:20px; font-size:0.8rem;
+}
+
+.pago-items-titulo { font-family:'Georgia',serif; color:#6a4e44; text-align:left; margin-bottom:0.75rem; }
+.pago-tabla {
+    width:100%; border-collapse:collapse; font-size:0.88rem;
+    margin-bottom:1.5rem; text-align:left;
+}
+.pago-tabla th {
+    background:#faf7f5; color:#6a4e44; padding:0.5rem 0.75rem;
+    border-bottom:2px solid #e4d5cd; font-size:0.8rem;
+}
+.pago-tabla td {
+    padding:0.5rem 0.75rem; border-bottom:1px solid #f0ebe8; color:#7a7959;
+}
+
+.pago-acciones { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem; }
+.pago-btn-historial {
+    display:inline-flex; align-items:center; gap:0.5rem;
+    padding:0.7rem 1.4rem; background:#6a4e44; color:#e4d5cd !important;
+    border-radius:8px; text-decoration:none; font-size:0.9rem; font-weight:600;
+    transition:background 0.3s;
+}
+.pago-btn-historial:hover { background:#cb958e; color:#fff !important; }
+.pago-btn-catalogo {
+    display:inline-flex; align-items:center; gap:0.5rem;
+    padding:0.7rem 1.4rem; background:#e4d5cd; color:#6a4e44 !important;
+    border-radius:8px; text-decoration:none; font-size:0.9rem; font-weight:600;
+    transition:background 0.3s;
+}
+.pago-btn-catalogo:hover { background:#cb958e; color:#fff !important; }
+
+/* ── TRANSACCIONES ───────────────────────────────────────────── */
+.trx-page { padding:2rem; max-width:900px; margin:0 auto; }
+.trx-lista { display:flex; flex-direction:column; gap:1rem; }
+
+.trx-card {
+    background:#fff; border-radius:12px;
+    box-shadow:0 3px 12px rgba(106,78,68,.08);
+    overflow:hidden; border-left:4px solid #cb958e;
+}
+.trx-card__header {
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0.9rem 1.2rem; background:#faf7f5;
+    border-bottom:1px solid #f0ebe8; flex-wrap:wrap; gap:0.5rem;
+}
+.trx-card__id { display:flex; align-items:center; gap:0.5rem; }
+.trx-card__num { font-size:0.82rem; color:#6a4e44; font-weight:600; word-break:break-all; }
+.trx-card__meta { display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap; }
+
+.trx-badge {
+    display:inline-flex; align-items:center; gap:0.3rem;
+    padding:0.2rem 0.65rem; border-radius:20px;
+    font-size:0.75rem; font-weight:700;
+}
+.trx-badge--ok  { background:#d4edda; color:#155724; }
+.trx-badge--pen { background:#fff3cd; color:#856404; }
+
+.trx-fecha { color:#ab9b9e; font-size:0.78rem; }
+.trx-card__body { padding:1rem 1.2rem; }
+.trx-dato {
+    display:flex; align-items:center; justify-content:space-between;
+    font-size:0.9rem; color:#7a7959;
+}
+.trx-total { color:#cb958e; font-size:1.1rem; }
+.trx-total small { color:#ab9b9e; font-size:0.75rem; margin-left:0.25rem; }
+
+/* ── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width:768px) {
+    .cart-layout     { flex-direction:column; }
+    .cart-resumen    { width:100%; position:static; }
+    .cart-item       { flex-wrap:wrap; }
+    .cart-item__acciones { width:100%; flex-direction:row; justify-content:space-between; align-items:center; }
+    .pago-detalle-grid { grid-template-columns:1fr; }
+    .pago-acciones   { flex-direction:column; align-items:center; }
+    .cart-page       { padding:1rem; }
+    .trx-page        { padding:1rem; }
+}
