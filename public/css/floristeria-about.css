@@ -13,9 +13,6 @@
     text-align: left;
 }
 
-/* ============================================================
-   CHIP / BADGE
-   ============================================================ */
 .about-chip {
     display: inline-block;
     background-color: var(--rosa-claro);
@@ -29,7 +26,7 @@
     margin-bottom: 0.8rem;
 }
 
-/* Línea decorativa centrada */
+
 .about-decorador {
     width: 60px;
     height: 3px;
@@ -57,10 +54,6 @@
     margin: 0 auto;
 }
 
-
-/* ============================================================
-   QUIÉNES SOMOS — Layout 2 columnas
-   ============================================================ */
 .about-quienes {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -96,7 +89,7 @@
     margin-top: 0.5rem;
 }
 
-/* Las 3 cards de servicios */
+
 .about-quienes-cards {
     display: flex;
     flex-direction: column;
@@ -148,9 +141,6 @@
 }
 
 
-/* ============================================================
-   ESTADÍSTICAS — Banner oscuro con imagen
-   ============================================================ */
 .about-stats {
     position: relative;
     background-image: url('https://images.pexels.com/photos/5414029/pexels-photo-5414029.jpeg');
@@ -218,9 +208,6 @@
 }
 
 
-/* ============================================================
-   ESPECIALIDADES — Grid 3 columnas
-   ============================================================ */
 .about-especialidades {
     background-color: var(--fondo);
     padding: 4rem 6%;
@@ -275,14 +262,11 @@
 }
 
 
-/* ============================================================
-   EQUIPO — Fondo crema con cards
-   ============================================================ */
 .about-equipo {
-    background-image: url('https://images.pexels.com/photos/5414029/pexels-photo-5414029.jpeg'); /* cambiá por tu imagen */
+    background-image: url('https://images.pexels.com/photos/5414029/pexels-photo-5414029.jpeg'); 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* efecto parallax, quitalo si no te gusta */
+    background-attachment: fixed; 
     padding: 0;
     position: relative;
 }
@@ -291,7 +275,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.75); /* ajustá el 0.45 para más o menos oscuridad */
+    background: rgba(0, 0, 0, 0.75); 
     pointer-events: none;
     z-index: 0;
 }
@@ -299,7 +283,7 @@
 .about-equipo-inner {
     padding: 3rem 6%;
     position: relative;
-    z-index: 1; /* asegura que el contenido quede encima del overlay */
+    z-index: 1; 
 }
 
 
@@ -376,9 +360,6 @@
 }
 
 
-/* ============================================================
-   CTA FINAL — Solicitar contacto
-   ============================================================ */
 .about-cta {
     background-color: var(--fondo);
     border-top: 1px solid var(--crema);
@@ -416,9 +397,6 @@
 }
 
 
-/* ============================================================
-   ANIMACIÓN SCROLL
-   ============================================================ */
 .reveal {
     opacity: 0;
     transform: translateY(28px);
@@ -431,9 +409,6 @@
 }
 
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
 @media (max-width: 900px) {
     .about-quienes {
         grid-template-columns: 1fr;

@@ -1,9 +1,3 @@
--- ============================================================
---  PARCHE para instalaciones existentes
---  Ejecuta esto si ya corriste el SQL anterior y solo
---  necesitas agregar los permisos que faltaban..
--- ============================================================
-
 -- 1. Agregar las funciones faltantes (PagarPayPal y AceptarPago)
 INSERT IGNORE INTO `funciones` (`fncod`, `fndsc`, `fnest`, `fntyp`) VALUES
     ('Checkout_PagarPayPal',   'Iniciar pago con PayPal',           'ACT', 'CTR'),

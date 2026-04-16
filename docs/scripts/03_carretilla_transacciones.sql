@@ -1,9 +1,4 @@
--- ============================================================
---  Carretilla de compras y transacciones
---  Floristería Promesa de Dios
--- ============================================================
-
--- Carretilla de usuario autenticado (basada en arreglos, no products)
+-- Carretilla de usuario autenticado 
 CREATE TABLE IF NOT EXISTS `carretilla_flor` (
     `usercod`   BIGINT(10)      NOT NULL,
     `arrcod`    INT(11)         NOT NULL,

@@ -32,7 +32,6 @@ INSERT INTO `funciones_roles` (`rolescod`, `fncod`, `fnrolest`) VALUES
     ('VENDEDOR', 'arreglos_listado_UDP', 'ACT'),
     ('VENDEDOR', 'arreglos_listado_DSP', 'ACT');
 
--- CLIENTE: solo vista pública 
 
 -- ── 4. USUARIOS────────────────────
 INSERT INTO `usuario`
@@ -63,27 +62,4 @@ VALUES
     ('ADMIN', 'Mantenimientos-Seguridad-UsuariosRoles',  'ACT'),
     ('ADMIN', 'Mantenimientos-Seguridad-RolesFunciones', 'ACT');
 
--- ── CONSULTAS───────────────────────────────
 
--- Screenshot 1: Funciones en la tabla de funciones
-SELECT fncod, fndsc, fnest, fntyp FROM funciones ORDER BY fncod;
-
--- Screenshot 2: Funciones relacionadas a los roles
-SELECT fr.rolescod, r.rolesdsc, fr.fncod, f.fndsc, fr.fnrolest
-FROM funciones_roles fr
-INNER JOIN roles r ON r.rolescod = fr.rolescod
-INNER JOIN funciones f ON f.fncod = fr.fncod
-ORDER BY fr.rolescod, fr.fncod;
-
--- Screenshot 3: Roles registrados
-SELECT rolescod, rolesdsc, rolesest FROM roles ORDER BY rolescod;
-
--- Screenshot 4: Usuarios relacionados a los roles
-SELECT u.usercod, u.username, u.useremail, ru.rolescod, r.rolesdsc, ru.roleuserest, ru.roleuserfch
-FROM roles_usuarios ru
-INNER JOIN usuario u ON u.usercod = ru.usercod
-INNER JOIN roles r ON r.rolescod = ru.rolescod
-ORDER BY u.usercod, ru.rolescod;
-
--- Screenshot 5: Usuarios
-SELECT usercod, useremail, username, userest, usertipo, userfching FROM usuario ORDER BY usercod;

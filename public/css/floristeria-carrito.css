@@ -1,9 +1,3 @@
-/* ============================================================
-   Carretilla, Pago y Transacciones
-   Paleta: #cb958e | #6a4e44 | #e4d5cd | #ab9b9e | #7a7959
-   ============================================================ */
-
-/* ── MENSAJES ────────────────────────────────────────────────── */
 .cart-msg-ok {
     background: #d4edda; color: #155724;
     border: 1px solid #c3e6cb;
@@ -13,7 +7,7 @@
     font-size: 0.9rem;
 }
 
-/* ── PÁGINA CARRETILLA ───────────────────────────────────────── */
+
 .cart-page { padding: 2rem; max-width: 1100px; margin: 0 auto; }
 .cart-titulo {
     font-family: 'Georgia', serif;
@@ -25,7 +19,7 @@
     gap: 0.6rem;
 }
 
-/* ── CARRITO VACÍO ───────────────────────────────────────────── */
+
 .cart-vacio {
     text-align: center;
     padding: 4rem 2rem;
@@ -41,7 +35,7 @@
 .cart-vacio h3 { color: #6a4e44; font-family: 'Georgia', serif; margin-bottom: 0.5rem; }
 .cart-vacio p  { color: #ab9b9e; margin-bottom: 1.5rem; }
 
-/* ── LAYOUT CARRITO ──────────────────────────────────────────── */
+
 .cart-layout {
     display: flex;
     gap: 2rem;
@@ -51,7 +45,7 @@
 .cart-items  { flex: 1 1 500px; }
 .cart-resumen { flex: 0 0 300px; min-width: 260px; }
 
-/* ── ITEM ────────────────────────────────────────────────────── */
+
 .cart-item {
     display: flex;
     gap: 1rem;
@@ -93,7 +87,7 @@
     color:#cb958e;
 }
 
-/* Cantidad */
+
 .cart-qty-form { display:flex; flex-direction:column; align-items:flex-end; gap:0.3rem; }
 .cart-qty-ctrl {
     display:flex; align-items:center;
@@ -124,14 +118,14 @@
 }
 .cart-btn-del:hover { background:#c0392b; color:#fff; border-color:#c0392b; }
 
-/* Vaciar */
+
 .cart-btn-vaciar {
     background:none; border:none; color:#ab9b9e; font-size:0.82rem;
     cursor:pointer; text-decoration:underline; padding:0;
 }
 .cart-btn-vaciar:hover { color:#c0392b; }
 
-/* ── RESUMEN ─────────────────────────────────────────────────── */
+
 .cart-resumen {
     background:#fff;
     border-radius:16px;
@@ -160,7 +154,7 @@
 }
 .cart-resumen__total strong { color:#cb958e; font-size:1.25rem; }
 
-/* Botón PayPal */
+
 .cart-btn-paypal {
     display:flex; align-items:center; justify-content:center; gap:0.5rem;
     width:100%; padding:0.9rem;
@@ -186,7 +180,7 @@
     gap:0.4rem; color:#ab9b9e; font-size:0.75rem;
 }
 
-/* Botones generales */
+
 .cart-btn-catalogo {
     display:inline-flex; align-items:center; gap:0.5rem;
     padding:0.7rem 1.5rem;
@@ -196,7 +190,7 @@
 }
 .cart-btn-catalogo:hover { background:#cb958e; color:#fff !important; }
 
-/* ── PAGO EXITOSO ────────────────────────────────────────────── */
+
 .pago-page { padding:2.5rem 1.5rem; max-width:750px; margin:0 auto; }
 .pago-card {
     background:#fff; border-radius:16px;
@@ -256,7 +250,7 @@
 }
 .pago-btn-catalogo:hover { background:#cb958e; color:#fff !important; }
 
-/* ── TRANSACCIONES ───────────────────────────────────────────── */
+
 .trx-page { padding:2rem; max-width:900px; margin:0 auto; }
 .trx-lista { display:flex; flex-direction:column; gap:1rem; }
 
@@ -291,7 +285,7 @@
 .trx-total { color:#cb958e; font-size:1.1rem; }
 .trx-total small { color:#ab9b9e; font-size:0.75rem; margin-left:0.25rem; }
 
-/* ── RESPONSIVE ──────────────────────────────────────────────── */
+
 @media (max-width:768px) {
     .cart-layout     { flex-direction:column; }
     .cart-resumen    { width:100%; position:static; }

@@ -2,7 +2,6 @@ body {
     background: #f8f4f2;
 }
 
-/* HERO DEL BLOG USANDO EL MISMO ESTILO DEL INICIO */
 .blog-hero-copy {
     position: relative;
     overflow: hidden;
@@ -84,7 +83,7 @@ body {
     }
 }
 
-/* RESTO DEL BLOG */
+
 .blog-intro {
     padding: 28px 20px 14px 20px;
 }

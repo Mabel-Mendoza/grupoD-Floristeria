@@ -25,9 +25,7 @@ INSERT INTO `tamanos` (`tamcod`, `tamdsc`, `tamest`) VALUES
     ('MED', 'Mediano',  'ACT'),
     ('GRN', 'Grande',   'ACT');
 
--- ============================================================
 -- Datos para la floristería
--- ============================================================
 
 INSERT INTO `arreglos`
     (`arrnombre`, `arrdescripcion`, `arrtamano`, `arrprecio`, `arrimgurl`, `arrstock`, `arrocasion`, `arrest`)

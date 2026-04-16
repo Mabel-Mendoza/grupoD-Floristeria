@@ -20,7 +20,8 @@
   {{endfor BeginScripts}}
 </head>
 <body>
-  <header>
+
+<header>
     <input type="checkbox" class="menu_toggle" id="menu_toggle" />
     <label for="menu_toggle" class="menu_toggle_icon" >
       <div class="hmb dgn pt-1"></div>
@@ -37,6 +38,9 @@
       </ul>
     </nav>
   </header>
+
+
+
   <main>
   {{{page_content}}}
   </main>

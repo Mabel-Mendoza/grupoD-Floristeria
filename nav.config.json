@@ -6,6 +6,11 @@
       "nav_label": "Ver Catálogo"
     },
     {
+      "id": "Menu_Acerca",
+      "nav_url": "index.php?page=Acerca",
+      "nav_label": "Acerca de Nosotros"
+    },
+    {
       "id": "Menu_Contactenos",
       "nav_url": "index.php?page=Contactenos",
       "nav_label": "Contáctenos"
@@ -14,11 +19,6 @@
       "id": "Menu_Blog",
       "nav_url": "index.php?page=Blog",
       "nav_label": "Blog"
-    },
-    {
-      "id": "Menu_Acerca",
-      "nav_url": "index.php?page=Acerca",
-      "nav_label": "Acerca de Nosotros"
     },
 
     {
