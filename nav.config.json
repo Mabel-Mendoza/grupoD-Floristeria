@@ -20,6 +20,11 @@
       "nav_url": "index.php?page=Blog",
       "nav_label": "Blog"
     },
+    {
+       "id": "Menu_FAQ",
+      "nav_url": "index.php?page=Faq",
+       "nav_label": "Preguntas Frecuentes"
+    },
 
     {
       "id": "Menu_SignIn",
