@@ -1,6 +1,3 @@
-<!-- ============================================================
-     HERO — Acerca de Nosotros
-     ============================================================ -->
 <section class="flor-hero herocontainer about-hero">
     <img src="https://images.pexels.com/photos/5414029/pexels-photo-5414029.jpeg" alt="Acerca de Floristería Promesa de Dios" />
     <div class="flor-hero-content about-hero-content">
@@ -12,7 +9,7 @@
     </div>
 </section>
 
-<!-- Borde decorativo abajo del hero -->
+
 <div style="width:99.5vw; height:80px; margin-left:calc(-50vw + 50%); overflow:hidden; line-height:0; margin-bottom:-1px;">
     <svg viewBox="0 0 1200 80" preserveAspectRatio="none" width="100%" height="80" xmlns="http://www.w3.org/2000/svg">
         <path d="M0,40 C50,10 100,70 150,40 C200,10 250,70 300,40 C350,10 400,70 450,40 C500,10 550,70 600,40 C650,10 700,70 750,40 C800,10 850,70 900,40 C950,10 1000,70 1050,40 C1100,10 1150,70 1200,40 L1200,0 L0,0 Z" fill="#6a4e44"/>

@@ -21,11 +21,25 @@
       "nav_label": "Blog"
     },
     {
+      "id": "Menu_Eventos",
+      "nav_url": "index.php?page=Eventos",
+      "nav_label": "Eventos"
+    },
+    {
+      "id": "Menu_CuidadoFlores",
+      "nav_url": "index.php?page=CuidadoFlores",
+      "nav_label": "Cuidado de las Flores"
+    },
+    {
+       "id": "Menu_Galeria",
+      "nav_url": "index.php?page=galeria",
+       "nav_label": "Galeria"
+    },
+    {
        "id": "Menu_FAQ",
       "nav_url": "index.php?page=Faq",
        "nav_label": "Preguntas Frecuentes"
     },
-
     {
       "id": "Menu_SignIn",
       "nav_url": "index.php?page=Sec_Login",

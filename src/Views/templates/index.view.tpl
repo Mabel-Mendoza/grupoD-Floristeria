@@ -1,6 +1,4 @@
-<!-- ============================================================
-     HERO
-     ============================================================ -->
+
 <section class="flor-hero herocontainer">
     <img src="https://images.pexels.com/photos/5410137/pexels-photo-5410137.jpeg" alt="Floristería" />
     <div class="flor-hero-content">
@@ -16,7 +14,7 @@
 
 
 
-<!-- Borde decorativo abajo -->
+
     <div style="width:99.5vw; height:80px; margin-left:calc(-50vw + 50%); overflow:hidden; line-height:0; margin-bottom:-1px;">
         <svg viewBox="0 0 1200 80" preserveAspectRatio="none" width="100%" height="80" xmlns="http://www.w3.org/2000/svg">
             <path d="M0,40 C50,10 100,70 150,40 C200,10 250,70 300,40 C350,10 400,70 450,40 C500,10 550,70 600,40 C650,10 700,70 750,40 C800,10 850,70 900,40 C950,10 1000,70 1050,40 C1100,10 1150,70 1200,40 L1200,0 L0,0 Z" fill="#6a4e44"/>
@@ -41,9 +39,6 @@
 
     
 
-<!-- ============================================================
-     POR QUÉ ELEGIRNOS
-     ============================================================ -->
 <section class="flor-porque reveal">
     <h3>¿Por qué elegirnos?</h3>
     <p class="subtitulo">Cada arreglo está hecho con amor y dedicación 🌸</p>
@@ -137,9 +132,7 @@
     </div>
 </section>
 
-<!-- ============================================================
-     CATÁLOGO — imagen de fondo + tarjetas polaroid
-     ============================================================ -->
+
 <section class="flor-catalogo-bg reveal">
     <!-- Borde decorativo arriba -->
     <div class="flor-divider-top">
@@ -188,7 +181,7 @@
         <a href="index.php?page=Catalogo" class="flor-btn flor-btn-blanco">Ver todos los arreglos</a>
     </div>
 
-    <!-- Borde decorativo abajo -->
+    
      <div class="flor-divider-bottom">
     <svg viewBox="0 0 1200 80" preserveAspectRatio="none" width="100%" height="80" xmlns="http://www.w3.org/2000/svg">
         <path d="M0,40 C50,10 100,70 150,40 C200,10 250,70 300,40 C350,10 400,70 450,40 C500,10 550,70 600,40 C650,10 700,70 750,40 C800,10 850,70 900,40 C950,10 1000,70 1050,40 C1100,10 1150,70 1200,40 L1200,80 L0,80 Z" fill="#e4d5cd"/>
@@ -217,9 +210,6 @@
 
 
 
-<!-- ============================================================
-     BANNER CTA 
-     ============================================================ -->
 {{ifnot IS_LOGGED}}
 <section class="flor-banner">
     <img src="{{~BASE_DIR}}public/imgs/hero/1.jpg" alt="Banner" />
@@ -231,9 +221,7 @@
 </section>
 {{endifnot IS_LOGGED}}
 
-<!-- ============================================================
-     SCRIPT — Animación al hacer scroll
-     ============================================================ -->
+
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const observer = new IntersectionObserver((entries) => {

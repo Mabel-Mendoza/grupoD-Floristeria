@@ -1,15 +1,14 @@
-<!-- BREADCRUMB -->
 <div class="prod-breadcrumb">
   <a href="index.php?page=Catalogo">Catálogo</a>
   <span> / </span>
   <span>{{arrnombre}}</span>
 </div>
 
-<!-- GRID PRINCIPAL: imagen + info -->
+
 <div class="prod-detalle">
   <div class="prod-grid">
 
-    <!-- COLUMNA IMAGEN -->
+    
     <div class="prod-imagen">
       <img id="prod-img-principal"
            src="{{~BASE_DIR}}/public/{{arrimgurl}}"
@@ -27,7 +26,7 @@
       </div>
     </div>
 
-    <!-- COLUMNA INFO -->
+   
     <div class="prod-info">
       <span class="prod-ocasion">{{arrocasion}}</span>
       <h2>{{arrnombre}}</h2>
@@ -41,26 +40,26 @@
 
       <p class="prod-descripcion">{{arrdescripcion}}</p>
 
-      <!-- Tamaño -->
+      
       <div class="prod-tamano">
         <strong>Tamaño:</strong>
         <span class="prod-tamano-badge">{{arrtamano}}</span>
       </div>
 
-      <!-- Stock -->
+      
       <div class="prod-stock">
         <i class="fas fa-check-circle" style="color:#7a7959;"></i>
         {{arrstock}} disponibles en inventario
       </div>
 
-      <!-- Cantidad -->
+      
       <div class="prod-cantidad">
         <button class="prod-qty-btn" onclick="cambiarCantidad(-1)">&#8722;</button>
         <input type="number" id="prod-qty" value="1" min="1" max="{{arrstock}}" readonly />
         <button class="prod-qty-btn" onclick="cambiarCantidad(1)">&#43;</button>
       </div>
 
-      <!-- Botones principales -->
+      
       <div class="prod-botones">
         {{if estaLogueado}}
         <a href="index.php?page=Checkout_Carretilla&add={{arrcod}}&qty=1" class="prod-btn-carrito">
@@ -78,7 +77,7 @@
         <button class="prod-btn-fav" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
       </div>
 
-      <!-- Extras informativos -->
+      
       <div class="prod-extras">
         <div class="prod-extra-item">
           <i class="fas fa-truck" style="color:#cb958e;"></i>
@@ -97,7 +96,7 @@
     </div><!-- /prod-info -->
   </div><!-- /prod-grid -->
 
-  <!-- TABS: Descripción / Info adicional / Reviews -->
+  
   <div class="prod-tabs">
     <div class="prod-tabs__nav">
       <button class="prod-tab-btn active" onclick="mostrarTab('desc', this)">Descripción</button>
@@ -105,7 +104,7 @@
       <button class="prod-tab-btn" onclick="mostrarTab('reviews', this)">Reseñas ({{numReviews}})</button>
     </div>
 
-    <!-- Tab: Descripción -->
+    
     <div id="tab-desc" class="prod-tab-content active">
       <p>{{descripcionLarga}}</p>
       <ul class="prod-desc-lista">
@@ -116,7 +115,7 @@
       </ul>
     </div>
 
-    <!-- Tab: Información adicional -->
+    
     <div id="tab-info" class="prod-tab-content" style="display:none;">
       <table class="prod-info-tabla">
         <tr><th>Ocasión</th><td>{{arrocasion}}</td></tr>
@@ -129,7 +128,7 @@
       </table>
     </div>
 
-    <!-- Tab: Reviews -->
+   
     <div id="tab-reviews" class="prod-tab-content" style="display:none;">
       <div class="prod-reviews-resumen">
         <div class="prod-reviews-global">
@@ -168,7 +167,7 @@
   </div>
 </div>
 
-<!-- PRODUCTOS RELACIONADOS -->
+
 <section class="prod-relacionados">
   <h3>Explorar productos relacionados</h3>
   <p class="subtitulo">Te pueden interesar también</p>
