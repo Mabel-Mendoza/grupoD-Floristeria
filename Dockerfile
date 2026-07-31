@@ -9,8 +9,10 @@ RUN apt-get update && apt-get install -y \
 # Extensiones necesarias: pdo_mysql (BD) y curl (PayPal API)
 RUN docker-php-ext-install pdo_mysql curl
 
-# Asegurar que solo un módulo MPM esté activo (el apt-get anterior puede activar mpm_event)
-RUN a2dismod mpm_event || true; a2dismod mpm_worker || true; a2enmod mpm_prefork || true
+# Asegurar que solo mpm_prefork esté activo: borrar cualquier otro symlink de MPM
+RUN rm -f /etc/apache2/mods-enabled/mpm_event.load /etc/apache2/mods-enabled/mpm_event.conf \
+           /etc/apache2/mods-enabled/mpm_worker.load /etc/apache2/mods-enabled/mpm_worker.conf
+RUN a2enmod mpm_prefork || true
 RUN ls -la /etc/apache2/mods-enabled/ | grep mpm
 
 # Habilitar mod_rewrite (por si usan USE_URLREWRITE=1)
