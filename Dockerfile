@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y \
 # Extensiones necesarias: pdo_mysql (BD) y curl (PayPal API)
 RUN docker-php-ext-install pdo_mysql curl
 
+# Asegurar que solo un módulo MPM esté activo (el apt-get anterior puede activar mpm_event)
+RUN a2dismod mpm_event mpm_worker 2>/dev/null; a2enmod mpm_prefork
+
 # Habilitar mod_rewrite (por si usan USE_URLREWRITE=1)
 RUN a2enmod rewrite
 
