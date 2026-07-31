@@ -1,5 +1,11 @@
 FROM php:7.4-apache
 
+# Librerías del sistema necesarias para compilar la extensión curl
+RUN apt-get update && apt-get install -y \
+    libcurl4-openssl-dev \
+    libzip-dev \
+    && rm -rf /var/lib/apt/lists/*
+
 # Extensiones necesarias: pdo_mysql (BD) y curl (PayPal API)
 RUN docker-php-ext-install pdo_mysql curl
 
