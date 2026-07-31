@@ -1,40 +1,40 @@
 FROM php:7.4-apache
 
-# Librerías del sistema necesarias para compilar la extensión curl
+# Instalar dependencias del sistema
 RUN apt-get update && apt-get install -y \
     libcurl4-openssl-dev \
     libzip-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Extensiones necesarias: pdo_mysql (BD) y curl (PayPal API)
+# Instalar extensiones PHP
 RUN docker-php-ext-install pdo_mysql curl
 
-# Asegurar que solo mpm_prefork esté activo: borrar cualquier otro symlink de MPM
-RUN rm -f /etc/apache2/mods-enabled/mpm_event.load /etc/apache2/mods-enabled/mpm_event.conf \
-           /etc/apache2/mods-enabled/mpm_worker.load /etc/apache2/mods-enabled/mpm_worker.conf
-RUN a2enmod mpm_prefork || true
-RUN ls -la /etc/apache2/mods-enabled/ | grep mpm
+# Asegurar que solo esté activo mpm_prefork
+RUN a2dismod mpm_event || true && \
+    a2dismod mpm_worker || true && \
+    a2enmod mpm_prefork
 
-# Habilitar mod_rewrite (por si usan USE_URLREWRITE=1)
+# Habilitar mod_rewrite
 RUN a2enmod rewrite
 
-# Permitir que .htaccess sobreescriba reglas
-RUN sed -ri -e 's!AllowOverride None!AllowOverride All!g' /etc/apache2/apache2.conf
+# Permitir .htaccess
+RUN sed -ri 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
+
+# Mostrar módulos cargados (solo para depuración)
+RUN apache2ctl -M
 
 # Instalar Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
-# Copiar composer.json primero (cache de capas)
-COPY composer.json ./
-RUN composer install --no-dev --optimize-autoloader
+# Instalar dependencias PHP
+COPY composer.json composer.lock* ./
+RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-# Copiar el resto del proyecto
+# Copiar el proyecto
 COPY . .
 
-# Railway asigna el puerto por variable de entorno $PORT
-RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
 EXPOSE 80
 
 CMD ["apache2-foreground"]
