@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y \
 RUN docker-php-ext-install pdo_mysql curl
 
 # Asegurar que solo un módulo MPM esté activo (el apt-get anterior puede activar mpm_event)
-RUN a2dismod mpm_event mpm_worker 2>/dev/null; a2enmod mpm_prefork
+RUN a2dismod mpm_event || true; a2dismod mpm_worker || true; a2enmod mpm_prefork || true
+RUN ls -la /etc/apache2/mods-enabled/ | grep mpm
 
 # Habilitar mod_rewrite (por si usan USE_URLREWRITE=1)
 RUN a2enmod rewrite
